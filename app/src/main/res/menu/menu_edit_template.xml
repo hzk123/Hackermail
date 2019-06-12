@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.hackermail.MainActivity">
     <item
-        android:id="@+id/action_login"
-        android:orderInCategory="100"
-        android:title="Log In"
+        android:id="@+id/action_edit_template"
+        android:orderInCategory="0"
+        android:title="Edit Template"
         app:showAsAction="never"
         android:background="@color/colorScreenBackground" />
 

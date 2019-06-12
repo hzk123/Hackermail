@@ -133,6 +133,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
+
+        getMenuInflater().inflate(R.menu.menu_edit_template , menu);
         if(emailId == ""){
             getMenuInflater().inflate(R.menu.menu_log_in, menu);}
         else{
@@ -149,6 +151,20 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
             //noinspection SimplifiableIfStatement
+
+            case R.id.action_edit_template:
+                //auto junp to Template activity
+                new Handler().postDelayed(new Runnable() {
+                    public void run() {
+                        Intent jumpIntent = new Intent(MainActivity.this,
+                                Template.class);
+                        MainActivity.this.startActivity(jumpIntent);
+                        MainActivity.this.finish();
+                        overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+                    }
+                }, 1000);
+                break;
+
             case R.id.action_login:
                 //auto jump to logIn activity
                 new Handler().postDelayed(new Runnable() {
@@ -201,7 +217,6 @@ public class MainActivity extends AppCompatActivity {
             // Save the data
             mClockViewModel.insert(clock);
         } else if (resultCode == RESULT_UPDATE) {
-            // TODO: implement "UPDATE"
             Clock clock = (Clock) data.getSerializableExtra(newClock.EXTRA_REPLY);
             mClockViewModel.updateWord(clock);
         }

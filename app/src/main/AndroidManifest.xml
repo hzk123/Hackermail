@@ -52,6 +52,7 @@
         </activity>
 
         <activity android:name=".editTemplate"></activity>
+        <activity android:name=".Template" />
     </application>
 
 </manifest>

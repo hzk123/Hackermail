@@ -25,4 +25,8 @@
     <string name="clear_data_toast_text">Clear the data now!</string>
     <string name="no_word">No Clock</string>
     <string name="rights">Copyright © 2019 HACKERMAIL All rights reserved.</string>
+    <string name="MailServiceNotification">Mail_Service_Notification</string>
+    <string name="notification_channel_description">notification from mail service</string>
+    <string name="mail_service">Mail has Send!!!</string>
+    <string name="Template_txt">Reason: </string>
 </resources>
